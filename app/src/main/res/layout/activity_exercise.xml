@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ExerciseActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/exerciseToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@color/white" />
+
+    <LinearLayout
+        android:id="@+id/restLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/exerciseToolbar"
+        app:layout_constraintBottom_toTopOf="@id/itemIdsRv"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:visibility="invisible">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="GET READY FOR"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:textSize="18sp"/>
+
+        <FrameLayout
+            android:id="@+id/restTimerLayout"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:background="@drawable/timer_frame_layout"
+            android:layout_marginTop="10dp">
+
+            <ProgressBar
+                android:id="@+id/restTimerBar"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center"
+                style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                android:max="10"
+                android:progress="100"
+                android:rotation="-90"
+                android:background="@drawable/progress_bar_completed_layout"
+                android:progressDrawable="@drawable/progress_bar_main_layout"
+                android:indeterminate="false"/>
+
+            <LinearLayout
+                android:id="@+id/restTimerLinear"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:background="@drawable/timer_text_layout">
+
+                <TextView
+                    android:id="@+id/restTimerTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    tools:text="20"
+                    android:textSize="28sp"
+                    android:textColor="@color/white"/>
+
+            </LinearLayout>
+
+        </FrameLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Upcoming Exercise:"
+            android:gravity="center"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/black"
+            android:textSize="18sp"/>
+
+        <TextView
+            android:id="@+id/restExerciseTv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:text="Jumping Jacks"
+            android:gravity="center"
+            android:textColor="@color/blue_5"
+            android:textSize="22sp"
+            android:textStyle="bold"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/exerciseLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@id/itemIdsRv"
+        app:layout_constraintTop_toBottomOf="@id/exerciseToolbar">
+
+        <ImageView
+            android:id="@+id/exerciseImage"
+            android:layout_width="match_parent"
+            android:layout_height="400dp" />
+
+        <TextView
+            android:id="@+id/exerciseTv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:textColor="@color/blue_5"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            tools:text="Exercise" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <LinearLayout
+                android:id="@+id/previousBtn"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:background="@drawable/item_button_background"
+                android:gravity="center"
+                android:layout_margin="5dp">
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/ic_previous"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/pauseBtn"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:background="@drawable/item_button_background"
+                android:gravity="center"
+                android:layout_margin="5dp">
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/ic_pause"/>
+
+            </LinearLayout>
+
+            <FrameLayout
+                android:id="@+id/exerciseTimerLayout"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:background="@drawable/timer_frame_layout"
+                android:layout_margin="10dp">
+
+                <ProgressBar
+                    android:id="@+id/exerciseTimerBar"
+                    style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/progress_bar_completed_layout"
+                    android:indeterminate="false"
+                    android:max="10"
+                    android:progress="100"
+                    android:progressDrawable="@drawable/progress_bar_main_layout"
+                    android:rotation="-90" />
+
+                <LinearLayout
+                    android:id="@+id/exerciseTimerLinear"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/timer_text_layout"
+                    android:gravity="center">
+
+                    <TextView
+                        android:id="@+id/exerciseTimerTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:textColor="@color/white"
+                        android:textSize="28sp"
+                        tools:text="20" />
+
+                </LinearLayout>
+
+            </FrameLayout>
+
+            <LinearLayout
+                android:id="@+id/playBtn"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:background="@drawable/item_id_selected_background"
+                android:gravity="center"
+                android:layout_margin="5dp">
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/ic_play"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/nextBtn"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:background="@drawable/item_button_background"
+                android:gravity="center"
+                android:layout_margin="5dp">
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/ic_next"/>
+
+            </LinearLayout>
+
+
+
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/itemIdsRv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/exerciseLayout"/>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

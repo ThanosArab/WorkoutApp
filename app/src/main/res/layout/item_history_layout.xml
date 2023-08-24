@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:id="@+id/mainLayout"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="5dp"
+    android:orientation="horizontal"
+    android:background="@color/light_grey"
+    android:weightSum="1">
+
+    <TextView
+        android:id="@+id/positionTv"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.1"
+        android:text="1"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:gravity="center"
+        android:padding="5dp"/>
+
+    <TextView
+        android:id="@+id/dateTv"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.5"
+        android:text="Date"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:padding="5dp"/>
+
+    <TextView
+        android:id="@+id/durationTv"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.3"
+        android:text="Duration"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:padding="5dp"/>
+
+    <ImageView
+        android:id="@+id/deleteIv"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.1"
+        android:layout_gravity="center"
+        android:src="@drawable/ic_delete"/>
+
+</LinearLayout>

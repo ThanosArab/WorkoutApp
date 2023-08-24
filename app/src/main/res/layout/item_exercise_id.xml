@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/itemIdTv"
+    android:layout_width="25dp"
+    android:layout_height="25dp"
+    android:background="@drawable/item_id_background"
+    android:text="1"
+    android:gravity="center"
+    android:textColor="@color/black"
+    android:padding="3dp"
+    android:textStyle="bold"
+    android:layout_margin="1dp"/>
