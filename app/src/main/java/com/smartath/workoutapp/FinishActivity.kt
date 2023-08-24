@@ -32,7 +32,7 @@ class FinishActivity : AppCompatActivity() {
 
         if (supportActionBar != null){
             supportActionBar?.setDisplayHomeAsUpEnabled(true)
-            supportActionBar?.title = "FINISH"
+            supportActionBar?.title = "Finish"
         }
 
         binding?.toolbarFinish?.setNavigationOnClickListener {
