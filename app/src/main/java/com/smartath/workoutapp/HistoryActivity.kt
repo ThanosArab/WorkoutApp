@@ -40,7 +40,7 @@ class HistoryActivity : AppCompatActivity() {
 
         if (supportActionBar != null){
             supportActionBar?.setDisplayHomeAsUpEnabled(true)
-            supportActionBar?.title = "HISTORY"
+            supportActionBar?.title = "History"
         }
 
         binding?.historyToolbar?.setNavigationOnClickListener {
